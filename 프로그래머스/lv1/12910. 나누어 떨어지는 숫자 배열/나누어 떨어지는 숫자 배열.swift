@@ -1,12 +1,6 @@
 import Foundation
 
 func solution(_ arr:[Int], _ divisor:Int) -> [Int] {
-    var answer: Array<Int> = []
-    for i in 0...(arr.count - 1){
-        if arr[i] % divisor == 0{
-            answer.append(arr[i])
-        }
-    }
-    
+    var answer = arr.filter{$0 % divisor == 0}
     return answer.isEmpty ? [-1] : answer.sorted()
 }
