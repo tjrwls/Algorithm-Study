@@ -1,10 +1,10 @@
 # [level 0] 최빈값 구하기 - 120812 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120812) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120812?language=swift) 
 
 ### 성능 요약
 
-메모리: 16.5 MB, 시간: 90.31 ms
+메모리: 16.4 MB, 시간: 121.82 ms
 
 ### 구분
 
