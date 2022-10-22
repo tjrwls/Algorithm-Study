@@ -1,12 +1,7 @@
 import Foundation
 
 func solution(_ lottos:[Int], _ win_nums:[Int]) -> [Int] {
-    var count: Int = 0
+    var answer: Int = lottos.filter{win_nums.contains($0)}.count
     var zeroCount: Int = lottos.filter{$0 == 0}.count
-    for inIndex in 0...5{
-        for outIndex in 0...5{
-            count += lottos[inIndex] == win_nums[outIndex] ? 1 : 0
-        }
-    }
-    return [ (count + zeroCount) == 0 ? 6 : (7 - count - zeroCount), count == 0 ? 6 : (7 - count)]
+    return [(answer + zeroCount) == 0 ? 6 : 7 - (answer + zeroCount) , answer == 0 ? 6 : 7 - answer]
 }
