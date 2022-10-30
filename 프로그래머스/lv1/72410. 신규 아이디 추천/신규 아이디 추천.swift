@@ -18,7 +18,7 @@ func solution(_ new_id:String) -> String {
         }
     }
     if answer == "" || answer == "."{
-     answer = "aaa"
+     return "aaa"
     } else{
         if answer.first! == "." {
             answer.removeFirst()
