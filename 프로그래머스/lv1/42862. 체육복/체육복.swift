@@ -1,17 +1,8 @@
 import Foundation
 func solution(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
-    // 전체 학생수 n  잃어버린 수 lost  여벌 수 reserve
     var isGymSuit: [Bool] = Array(repeating: true, count: n)
-    // 체육복을 가지고 있는지 확인할 배열
-    // 1 ~ 30
-    
     lost.map{isGymSuit[$0 - 1] = false}
-    // 도둑 맞은 체육복
-    // 1 ~ n
-    
     var reserveArray: [Int] = []
-    // filter로 도둑맞은 경우 제외
-    // 1 ~ n
     
     for i in reserve {
         if !isGymSuit[i - 1] {
