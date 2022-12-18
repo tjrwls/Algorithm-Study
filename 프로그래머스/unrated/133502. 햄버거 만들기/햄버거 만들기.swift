@@ -1,19 +1,20 @@
 import Foundation
 
 func solution(_ ingredient:[Int]) -> Int {
-    var checkbugger: [Int] = []
+    var ingredient = ingredient
+    var ingredientIndex = 0
     var answer: Int = 0
     
-    for element in ingredient {
-        checkbugger.append(element)
-        if checkbugger.count >= 4 {
-            let checkIndex = checkbugger.count
-            if checkbugger[(checkIndex - 4)...checkIndex - 1] == [1, 2, 3, 1] {
-                // checkbugger = checkbugger.dropLast(4)
-                checkbugger = Array(checkbugger[0..<(checkIndex - 4)])
-                answer += 1
-            }
+    while (ingredientIndex <= (ingredient.count - 4)) {
+        if ingredient[ingredientIndex...(ingredientIndex + 3)] == [1, 2, 3, 1] {
+            answer += 1
+            ingredient = Array(ingredient.dropLast(ingredient.count - ingredientIndex) + ingredient.dropFirst(ingredientIndex + 4))
+            ingredientIndex = ingredientIndex < 3 ? 0 : ingredientIndex - 3
+        }
+        else {
+            ingredientIndex += 1
         }
     }
-    return answer 
+    
+    return answer
 }
