@@ -1,10 +1,10 @@
 # [level 2] 이진 변환 반복하기 - 70129 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/70129) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/70129?language=swift) 
 
 ### 성능 요약
 
-메모리: 4.13 MB, 시간: 0.12 ms
+메모리: 16.6 MB, 시간: 7.61 ms
 
 ### 구분
 
