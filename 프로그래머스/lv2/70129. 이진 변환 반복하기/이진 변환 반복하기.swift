@@ -1,7 +1,5 @@
 import Foundation
 
-import Foundation
-
 func solution(_ s:String) -> [Int] {
     var str: String = s
     var answer: [Int] = [0, 0]
