@@ -3,7 +3,7 @@ import Foundation
 let num = Int(readLine()!)!
 print(solution(num))
 func solution(_ num: Int) -> String {
-    for index in 0...4455 {
+    for index in 0...1188 {
         let numArr: [Int] = [(index / 1000) % 10, (index / 100) % 10, (index / 10) % 10, index % 10]
         let resultNum: Int = (numArr[0] + numArr[2]) * 10 + numArr[1] + numArr[3]
         let resultArr: [Int] = [resultNum / 10, resultNum % 10]
