@@ -1,4 +1,4 @@
-var inputNum = Int(readLine()!) ?? 0
+var inputNum = Int(readLine()!)!
 var inputArr: Set<String> = Set<String>()
 var answer: [String] = []
 for _ in 0..<inputNum {
