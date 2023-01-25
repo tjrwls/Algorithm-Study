@@ -1,13 +1,7 @@
-import Foundation
-
 var inputNum = Int(readLine()!) ?? 0
-var inputArr: [String] = []
+var inputArr: Set<String> = Set<String>()
+var answer: [String] = []
 for _ in 0..<inputNum {
-    inputArr.append(readLine()!)
+    inputArr.insert(readLine()!)
 }
-inputArr = Array(Set(inputArr))
-inputArr.sort { ($0.count, $0) < ($1.count, $1) }
-
-for element in inputArr {
-    print(element)
-}
+print(inputArr.sorted { ($0.count, $0) < ($1.count, $1)}.joined(separator: "\n"))
