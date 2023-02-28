@@ -6,6 +6,5 @@ for _ in 1...inputNum {
     answer.append(Int(String(readLine()!))!)
 }
 answer.sort()
-for element in answer {
-    print(element)
-}
+
+print(answer.map{String($0)}.joined(separator: "\n"))
