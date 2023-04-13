@@ -7,14 +7,14 @@ func solution(_ s:String) -> Int {
     func moveLeft() {
         str.append(str.removeFirst())
     }
-    
-    func check() {
+
+		func check() {
         var tempStr = ""
         var count = 0
         for char in str {
             switch char {
-            case "(":
-                tempStr.append("(")
+            case "(", "{", "[":
+                tempStr.append(char)
             case ")":
                 if tempStr.last == "(" {
                     tempStr.removeLast()
@@ -22,8 +22,6 @@ func solution(_ s:String) -> Int {
                         count += 1
                     }
                 } else { return }
-            case "{":
-                tempStr.append("{")
             case "}":
                 if tempStr.last == "{" {
                     tempStr.removeLast()
@@ -31,8 +29,6 @@ func solution(_ s:String) -> Int {
                         count += 1
                     }
                 } else { return }
-            case "[":
-                tempStr.append("[")
             case "]":
                 if tempStr.last == "[" {
                     tempStr.removeLast()
@@ -46,7 +42,7 @@ func solution(_ s:String) -> Int {
         }
         if tempStr.isEmpty {
             answer.append(count)
-        } 
+        }
     }
 
     for _ in 0...str.count {
